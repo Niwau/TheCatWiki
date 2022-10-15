@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const StyledBenefits = styled.section`
 
-    
     margin: 5rem 10rem;
 
     blockquote {

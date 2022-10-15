@@ -26,7 +26,7 @@ export const StyledCard = styled.div<CardProps>`
     }
 
     p {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         font-weight: 400;
         line-height: 1.8rem;
         color: ${ props => (props.variant == 'pink') ? 'white' : 'var(--gray)' };
