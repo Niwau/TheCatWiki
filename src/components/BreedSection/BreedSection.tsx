@@ -1,3 +1,4 @@
+import { ArrowRight } from "phosphor-react";
 import { useEffect, useLayoutEffect, useState } from "react";
 import { Breed } from "../Breed/Breed"
 import { StyledBreedSection } from "./BreedSection.styles"
@@ -40,6 +41,10 @@ export const BreedSection = () => {
       <div>
         { breedMap }
       </div>
+      <footer>
+        <a href="">See more</a>
+        <ArrowRight/>
+      </footer>
     </StyledBreedSection>
   )
 }

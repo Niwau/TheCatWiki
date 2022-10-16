@@ -22,4 +22,25 @@ export const StyledBreedSection = styled.section`
         gap: 4rem;
     }
 
+    > footer {
+        margin-top: 4rem;
+        justify-content: flex-end;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        > a {
+            color: var(--pink);
+            text-decoration: none;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        > svg {
+            color: var(--pink);
+            font-size: 2.5rem;
+        }
+
+    }
+
 `;
