@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const StyledBreedSection = styled.section`
 
     margin: 12rem 10rem;
-  
 
     > h1 {
         text-align: center;

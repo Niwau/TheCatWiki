@@ -8,8 +8,8 @@ export const Hero = () => {
         <h1>Find information about your favorite <span>cat breed</span></h1>
         <p>You can search for cat breeds to see pictures, images and other cool stuffs about cats.</p>
         <footer>
-          <Button href="" variant="pink">Explore</Button>
-          <Button href="" variant="white">Github</Button>
+          <Button href="#breed-section" variant="pink">Explore</Button>
+          <Button href="https://github.com/Niwau" variant="white" target="_blank">Github</Button>
         </footer>
       </main>
       <img src="CatHero.jpg"/>

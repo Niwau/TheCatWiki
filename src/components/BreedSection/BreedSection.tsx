@@ -1,45 +1,14 @@
 import { ArrowRight } from "phosphor-react";
-import { useEffect, useLayoutEffect, useState } from "react";
-import { Breed } from "../Breed/Breed"
+import { BreedList } from "../BreedList/BreedList";
 import { StyledBreedSection } from "./BreedSection.styles"
-
-type breedResponse = [
-  {
-    origin: string,
-    name: string,
-    image: {
-      url: string
-    }
-  }
-]
 
 export const BreedSection = () => {
 
-  const [ breedList, setBreedList ] = useState<breedResponse | []>([]);
-
-  useEffect(() => {
-    fetch('https://api.thecatapi.com/v1/breeds?limit=8')
-      .then(res => res.json())
-      .then(breeds => setBreedList(breeds))
-  }, [])
-
-  const breedMap = breedList.map((breed, index) => {
-    return (
-      <Breed
-        pageUrl=""
-        country={breed.origin}
-        image={breed.image.url}
-        name={breed.name}
-        key={index}
-      />
-    )
-  })
-
   return (
-    <StyledBreedSection>
+    <StyledBreedSection id="breed-section">
       <h1>Some cool <span>breeds</span></h1>
       <div>
-        { breedMap }
+        <BreedList count={8}/>
       </div>
       <footer>
         <a href="">See more</a>
