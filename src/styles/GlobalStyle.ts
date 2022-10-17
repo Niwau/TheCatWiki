@@ -10,6 +10,27 @@ export const GlobalStyle = createGlobalStyle`
     html {
         font-size: 10px;
         scroll-behavior: smooth;
+
+        @media (max-width: 1024px) {
+            font-size: 8px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 7px;
+        }
+
+        @media (max-width: 600px) {
+            font-size: 6px;
+        }
+
+        @media (max-width: 440px) {
+            font-size: 5px;
+        }
+
+        @media (max-width: 375px) {
+            font-size: 4px;
+        }
+        
     }
 
     body {

@@ -5,12 +5,13 @@ export const StyledHero = styled.section`
     outline: 1px solid black;
     padding: 5rem 3.5rem;
     margin: 0 10rem;
-    grid-column-gap: 1rem;
 
     display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    place-items: center;
-    grid-column-gap: 9rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+
+    justify-content: space-between;
+    align-items: center;
 
     img {
         width: 100%;
@@ -43,8 +44,24 @@ export const StyledHero = styled.section`
         footer {
             display: flex;
             gap: 1.5rem;
+            
         }
 
+    }
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+        place-items: center;
+        img {
+            width:90%;
+        }
+    }
+
+    @media (max-width: 375px) {
+        grid-template-columns: 1fr;
+        img {
+                width:90%;
+        }
     }
 
 `;

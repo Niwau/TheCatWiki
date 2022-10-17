@@ -32,7 +32,15 @@ export const StyledBenefits = styled.section`
     footer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 2.5rem;
+        gap: 2.5rem;
+        justify-content: center;
+    }
+
+    @media (max-width: 425px) {
+        footer {
+            grid-template-columns: 40rem;
+
+        }
     }
 
 `;

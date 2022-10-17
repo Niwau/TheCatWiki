@@ -7,10 +7,11 @@ export const StyledDidYouKnow = styled.article`
 
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-column-gap: 4rem;
+    gap: 4rem;
     background-color: white;
     box-shadow: 1.5rem 1.5rem 0 black;
     outline: 1px solid black;
+    place-items: center;
 
     img {
         width: 100%;
@@ -30,6 +31,13 @@ export const StyledDidYouKnow = styled.article`
         font-size: 1.6rem;
         font-weight: 300;
         line-height: 2.2rem;
+    }
+
+    @media (max-width: 500px) {
+        grid-template-columns: 1fr;
+        img {
+            width: 90%;
+        }
     }
 
 `;
