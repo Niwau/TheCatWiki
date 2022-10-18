@@ -16,14 +16,14 @@ const router = createBrowserRouter(createRoutesFromElements(
   <>
     <Route 
       path='/' 
-      loader={() => getBreeds(8)} 
+      loader={() => getBreeds(8, 0)} 
       element={<Home/>} 
       errorElement={<Error404/>} 
     />
     <Route 
-      path='/cats/:id' 
-      loader={() => getBreeds(20)} 
+      path='/cats/:page' 
       element={<Cats/>} 
+      loader={({ params }) => getBreeds(10, parseInt(params.page as string))}
       errorElement={<Error404/>}
     />
   </>

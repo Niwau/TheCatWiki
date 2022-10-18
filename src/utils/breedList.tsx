@@ -7,7 +7,7 @@ export const breedList = ( breeds : ApiResponse) => {
     breeds.map(breed => (
       <Breed 
         country={breed.origin} 
-        image={breed.image.url} 
+        image={breed.image == undefined ? '/CatNotExist.webp' : breed.image.url} 
         name={breed.name} 
         key={breed.id} 
         pageUrl=""

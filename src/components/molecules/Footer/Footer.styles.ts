@@ -6,6 +6,8 @@ export const StyledFooter = styled.footer`
     padding: 1.6rem 3rem;
     background-color: black;
     align-items: center;
+    bottom: 0;
+    width: 100%;
 
     h1 {
         font-size: 2rem;
