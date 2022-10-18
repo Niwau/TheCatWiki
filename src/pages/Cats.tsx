@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom"
-import { Breed } from "../components/molecules/Breed/Breed"
+import { breedList } from "../utils/breedList"
 import { CatsWrapper } from "../components/molecules/CatsWrapper/CatsWrapper"
 import { Footer } from "../components/molecules/Footer/Footer"
 import { Header } from "../components/molecules/Header/Header"
@@ -13,15 +13,7 @@ export const Cats = () => {
     <>
       <Header/>
         <CatsWrapper>
-          {breeds.map(breed => (
-            <Breed 
-              name={breed.name} 
-              country={breed.origin} 
-              image={breed.image.url}
-              key={breed.id}
-              pageUrl=''
-            />
-          ))}
+          {breedList(breeds)}
         </CatsWrapper>
       <Footer/>
     </>
