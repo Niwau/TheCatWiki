@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 export const StyledSearchBar = styled.div`
 
+    width: fit-content;
+    position: relative;
+
     > div {
         display: flex;
         align-items: center;
@@ -9,19 +12,20 @@ export const StyledSearchBar = styled.div`
 
     svg {
         font-size: 2rem;
-        position: relative;
-        right: -21rem;
+        position: absolute;
+        right: 1rem;
     }
 
     input {
+        width: 20rem;
         border: 1px solid black;
         padding: 0.5rem 3rem 0.5rem 1.5rem;
         outline: none;
     }
 
     footer {
+        width: 100%;
         margin-top: 1rem;
-        margin-left: 2.1rem;
         position: absolute;
         max-height: 20rem;
         overflow: auto;

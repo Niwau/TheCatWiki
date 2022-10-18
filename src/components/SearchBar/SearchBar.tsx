@@ -36,8 +36,8 @@ export const SearchBar = () => {
   return (
     <StyledSearchBar>
       <div>
-        <MagnifyingGlass />
         <input type="text" onChange={debouncedHandleChange} onBlur={handleBlur} onFocus={handleFocus}/>
+        <MagnifyingGlass />
       </div>
       {(searchResult.length > 0 && isFocused) ? <footer>{searchResultList}</footer> : <></>}
     </StyledSearchBar>
