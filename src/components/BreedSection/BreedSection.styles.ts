@@ -23,9 +23,6 @@ export const StyledBreedSection = styled.section`
         @media (max-width: 1024px) {
             grid-template-columns: repeat(2,1fr);
         }
-
-        
-    
     }
 
     > footer {

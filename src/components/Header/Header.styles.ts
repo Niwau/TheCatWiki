@@ -7,7 +7,9 @@ export const StyledHeader = styled.header`
     align-items: center;
     justify-content: space-between;
 
-    h1 {
+    a {
+        color: black;
+        text-decoration: none;
         font-size: 2rem;
         font-weight: 500;
     }

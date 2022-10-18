@@ -1,18 +1,8 @@
 import { useEffect, useState } from "react"
-
-type Response = [
-    {
-        origin: string,
-        name: string,
-        id: string,
-        image: {
-            url: string
-        }
-    }
-]
+import { ApiResponse } from "../types/apiTypes"
 
 export const useFetch = (endpoint : string) => {
-    const [data, setData] = useState<Response | []>([])
+    const [data, setData] = useState<ApiResponse | []>([])
 
     useEffect(() => {
         fetch(endpoint)

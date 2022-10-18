@@ -1,4 +1,5 @@
 import { ArrowRight } from "phosphor-react";
+import { Link } from "react-router-dom";
 import { BreedList } from "../BreedList/BreedList";
 import { StyledBreedSection } from "./BreedSection.styles"
 
@@ -11,7 +12,7 @@ export const BreedSection = () => {
         <BreedList count={8}/>
       </div>
       <footer>
-        <a href="">See more</a>
+        <Link to="/cats">See more</Link>
         <ArrowRight/>
       </footer>
     </StyledBreedSection>
