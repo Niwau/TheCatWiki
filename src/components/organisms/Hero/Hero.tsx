@@ -1,4 +1,4 @@
-import { Button } from "../Button/Button"
+import { Button } from "../../molecules/Button/Button"
 import { StyledHero } from "./Hero.styles"
 
 export const Hero = () => {

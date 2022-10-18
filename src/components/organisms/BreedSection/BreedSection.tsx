@@ -1,6 +1,6 @@
 import { ArrowRight } from "phosphor-react";
 import { Link } from "react-router-dom";
-import { BreedList } from "../BreedList/BreedList";
+import { BreedList } from "../../molecules/BreedList/BreedList";
 import { StyledBreedSection } from "./BreedSection.styles"
 
 export const BreedSection = () => {

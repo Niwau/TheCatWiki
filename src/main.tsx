@@ -9,7 +9,7 @@ import { getBreeds } from './utils/api'
 const router = createBrowserRouter(createRoutesFromElements(
   <>
     <Route path='/' element={<Home/>} errorElement={<Error404/>}/>
-    <Route path='cats' loader={() => getBreeds(10)} element={<Cats/>} errorElement={<Error404/>}/>
+    <Route path='cats' loader={() => getBreeds(20)} element={<Cats/>} errorElement={<Error404/>}/>
   </>
 ))
 

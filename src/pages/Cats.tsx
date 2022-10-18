@@ -1,8 +1,8 @@
 import { useLoaderData } from "react-router-dom"
-import { Breed } from "../components/Breed/Breed"
-import { CatsWrapper } from "../components/CatsWrapper/CatsWrapper"
-import { Footer } from "../components/Footer/Footer"
-import { Header } from "../components/Header/Header"
+import { Breed } from "../components/molecules/Breed/Breed"
+import { CatsWrapper } from "../components/molecules/CatsWrapper/CatsWrapper"
+import { Footer } from "../components/molecules/Footer/Footer"
+import { Header } from "../components/molecules/Header/Header"
 import { ApiResponse } from "../types/apiTypes"
 
 export const Cats = () => {

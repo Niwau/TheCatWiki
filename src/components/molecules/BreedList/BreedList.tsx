@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { ApiResponse } from "../../types/apiTypes";
-import { getBreeds } from "../../utils/api";
+import { ApiResponse } from "../../../types/apiTypes";
+import { getBreeds } from "../../../utils/api";
 import { Breed } from "../Breed/Breed";
 
 export const BreedList = ({ count } : { count: number }) => {

@@ -1,9 +1,9 @@
 import { StyledSearchBar } from "./SearchBar.styles"
 import { MagnifyingGlass } from "phosphor-react"
 import { ChangeEvent, useCallback, useState } from "react"
-import { useDebounce } from "../../hooks/useDebounce"
-import { ApiResponse } from "../../types/apiTypes"
-import { API_ENDPOINT } from "../../utils/api"
+import { useDebounce } from "../../../hooks/useDebounce"
+import { ApiResponse } from "../../../types/apiTypes"
+import { API_ENDPOINT } from "../../../utils/api"
 
 export const SearchBar = () => {
 

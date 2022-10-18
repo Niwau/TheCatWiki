@@ -1,9 +1,9 @@
-import { Benefits } from "../components/Benefits/Benefits"
-import { BreedSection } from "../components/BreedSection/BreedSection"
-import { DidYouKnow } from "../components/DidYouKnow/DidYouKnow"
-import { Footer } from "../components/Footer/Footer"
-import { Header } from "../components/Header/Header"
-import { Hero } from "../components/Hero/Hero"
+import { Benefits } from "../components/organisms/Benefits/Benefits"
+import { BreedSection } from "../components/organisms/BreedSection/BreedSection"
+import { DidYouKnow } from "../components/molecules/DidYouKnow/DidYouKnow"
+import { Footer } from "../components/molecules/Footer/Footer"
+import { Header } from "../components/molecules/Header/Header"
+import { Hero } from "../components/organisms/Hero/Hero"
 
 export const Home = () => {
   return (

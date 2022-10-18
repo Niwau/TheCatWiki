@@ -1,4 +1,4 @@
-import { Card } from "../Card/Card"
+import { Card } from "../../molecules/Card/Card"
 import { StyledBenefits } from "./Benefits.styles"
 
 export const Benefits = () => {
@@ -21,7 +21,6 @@ export const Benefits = () => {
           <h1>Heart <span>Healthy</span></h1>
           <p>A rescue cat or pet can be heart-healthy as well.  Cats can relieve stress and lower blood pressure.</p>
         </Card>
-
        </footer>
     </StyledBenefits>
   )
