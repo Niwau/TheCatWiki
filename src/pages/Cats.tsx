@@ -4,8 +4,6 @@ import { CatsWrapper } from "../components/molecules/CatsWrapper/CatsWrapper"
 import { Footer } from "../components/molecules/Footer/Footer"
 import { Header } from "../components/molecules/Header/Header"
 import { ApiResponse } from "../types/apiTypes"
-import { useEffect } from "react"
-import { getBreeds } from "../utils/api"
 
 export const Cats = () => {
 
