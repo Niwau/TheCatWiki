@@ -4,7 +4,6 @@ import { DidYouKnow } from "../components/molecules/DidYouKnow/DidYouKnow"
 import { Footer } from "../components/molecules/Footer/Footer"
 import { Header } from "../components/molecules/Header/Header"
 import { Hero } from "../components/organisms/Hero/Hero"
-import { Card } from "../components/molecules/Card/Card"
 
 export const Home = () => {
   return (

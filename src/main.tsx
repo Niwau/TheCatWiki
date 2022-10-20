@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom/client'
+import { GlobalStyle } from './styles/GlobalStyle'
 import { Home } from './pages/Home'
 import { Error404 } from './pages/Error404'
 import { Cats } from './pages/Cats'
 import { getBreeds } from './utils/api'
-import '../src/styles/index.css'
 
 import { 
   createBrowserRouter, 
@@ -31,6 +31,7 @@ const router = createBrowserRouter(createRoutesFromElements(
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <>
+    <GlobalStyle/>
     <RouterProvider router={router}/>
   </>
 )
