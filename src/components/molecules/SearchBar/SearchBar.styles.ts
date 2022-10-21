@@ -24,11 +24,12 @@ export const StyledSearchBar = styled.div`
     }
 
     footer {
+        overflow-x: hidden;
+        overflow-y: auto;
         width: 100%;
         margin-top: 1rem;
         position: absolute;
         max-height: 20rem;
-        overflow: auto;
         padding: 1.2rem;
         background-color: white;
         outline: 1px solid black;

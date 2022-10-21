@@ -5,22 +5,22 @@ import { useSearchBar } from "./useSearchBar"
 export const SearchBar = () => {
 
   const { 
-    debouncedHandleChange, 
     isOpen, 
     toggleModal, 
-    searchResultList 
+    searchResultList,
+    handleChange
   } = useSearchBar()
 
   return (
     <StyledSearchBar>
       <div>
-        <input type="text" onChange={debouncedHandleChange} onBlur={toggleModal} onFocus={toggleModal}/>
+        <input type="text" onFocus={toggleModal} onBlur={toggleModal} onChange={handleChange}/>
         <MagnifyingGlass />
       </div>
       {
         isOpen && searchResultList.length > 0 && 
         (
-          <footer>{searchResultList}</footer>
+          <footer >{searchResultList}</footer>
         )
       }
     </StyledSearchBar>

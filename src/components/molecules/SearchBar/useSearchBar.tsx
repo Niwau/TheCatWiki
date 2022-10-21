@@ -1,47 +1,46 @@
-import { ChangeEvent, useCallback, useState } from "react";
+import { ChangeEvent, useContext, useEffect, useState } from "react";
+import { APIContext } from "../../../context/APIContext";
 import { useDebounce } from "../../../hooks/useDebounce";
 import { Breeds } from "../../../types/api";
-import { API_ENDPOINT } from "../../../utils/api";
 import { Badge } from "../Badge/Badge";
 
 export function useSearchBar() {
   const [searchResult, setSearchResult] = useState<Breeds | []>([]);
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    fetch(`${API_ENDPOINT}/breeds/search?q=${event.target.value}`)
-      .then((res) => res.json())
-      .then((json) => setSearchResult(json));
+  const breeds = useContext(APIContext);
+
+  const changeEvent = (e: ChangeEvent<HTMLInputElement>) => {
+    const filtered = breeds.filter((breed) =>
+      breed.name.toLowerCase().includes(e.target.value.toLowerCase())
+    );
+    setSearchResult(filtered);
   };
 
-  const searchResultList = searchResult.map((breed) => {
+  const handleChange = useDebounce(changeEvent, 1000);
+
+  const searchResultList = searchResult.map((breed, index) => {
     return (
-      <>
-				<Badge
+      <Badge
         key={breed.id}
         image={breed?.image?.url ?? "/CatNotExist.webp"}
         path={`/cat/${breed.id}`}
-				country={breed.origin}
-				name={breed.name}
+        country={breed.origin}
+        name={breed.name}
       />
-			<hr />
-			</>
     );
   });
 
-  const toggleModal = () => {
+  const openCloseModal = () => {
     setIsOpen((prevState) => !prevState);
-  };
+  }
 
-  const debouncedHandleChange = useCallback(
-    useDebounce(handleChange, 1000),
-    []
-  );
+  const toggleModal = useDebounce(openCloseModal, 500);
 
   return {
     isOpen,
-    debouncedHandleChange,
     toggleModal,
     searchResultList,
+    handleChange,
   };
 }
