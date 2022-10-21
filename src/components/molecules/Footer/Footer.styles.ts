@@ -3,14 +3,14 @@ import styled from 'styled-components';
 export const StyledFooter = styled.footer`
     display: flex;
     justify-content: space-between;
-    padding: 1.6rem 3rem;
+    padding: 0.5rem 3rem;
     background-color: black;
     align-items: center;
     bottom: 0;
     width: 100%;
 
     h1 {
-        font-size: 2rem;
+        font-size: 1.7rem;
         font-weight: 500;
         color: white;
     }

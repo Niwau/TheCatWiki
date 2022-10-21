@@ -2,7 +2,7 @@ import { StyledCatsWrapper } from "./CatsWrapper.styles"
 import { useContext } from "react"
 import { useParams } from "react-router-dom"
 import { APIContext } from "../../../context/APIContext"
-import { Breed } from "../Breed/Breed"
+import { Breed } from "../../molecules/Breed/Breed"
 
 export const CatsWrapper = () => {
 
@@ -21,9 +21,9 @@ export const CatsWrapper = () => {
             <Breed 
               key={breed.id} 
               country={breed.origin} 
-              image={breed.image ? breed.image.url : '/CatNotExist.webp'} 
+              image={breed.image?.url ?? '/CatNotExist.webp'} 
               name={breed.name} 
-              pageUrl=" " 
+              pageUrl={`/cat/${breed.id}`}
             />
           )
         })

@@ -18,9 +18,9 @@ export const BreedSection = () => {
             <Breed 
               key={breed.id} 
               country={breed.origin} 
-              image={breed.image ? breed.image.url : '/CatNotExist.webp'} 
+              image={breed.image?.url ?? '/CatNotExist.webp'} 
               name={breed.name} 
-              pageUrl=" " 
+              pageUrl={`/cat/${breed.id}`}
             />
           )
         }

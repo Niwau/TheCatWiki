@@ -11,19 +11,14 @@ import {
   Route 
 } from 'react-router-dom'
 import { APIContextProvider } from './context/APIContext'
+import { Cat } from './pages/Cat'
 
 const router = createBrowserRouter(createRoutesFromElements(
   <>
-    <Route 
-      path='/' 
-      element={<Home/>} 
-      errorElement={<Error404/>} 
-    />
-    <Route 
-      path='/cats/:page' 
-      element={<Cats/>} 
-      errorElement={<Error404/>}
-    />
+    <Route path='/' element={<Home/>}/>
+    <Route path='/cats/:page' element={<Cats/>}/>
+    <Route path='/cat/:id' element={<Cat/>}/>
+    <Route path={'*'} element={<Error404/>}/>
   </>
 ))
 

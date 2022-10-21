@@ -1,4 +1,4 @@
-import { CatsWrapper } from "../components/molecules/CatsWrapper/CatsWrapper"
+import { CatsWrapper } from "../components/organisms/CatsWrapper/CatsWrapper"
 import { Footer } from "../components/molecules/Footer/Footer"
 import { Header } from "../components/molecules/Header/Header"
 import { PaginationButtons } from "../components/molecules/PaginationButtons/PaginationButtons"
@@ -6,12 +6,12 @@ import { PaginationButtons } from "../components/molecules/PaginationButtons/Pag
 export const Cats = () => {
 
   return (
-    <>
+    <div>
       <Header/>
-        <CatsWrapper/>
-        <PaginationButtons/>
+      <CatsWrapper/>
+      <PaginationButtons/>
       <Footer/>
-    </>
+    </div>
   )
 }
 
