@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { APIContext } from "../../../context/APIContext";
 import { Breed } from "../../molecules/Breed/Breed";
 import { StyledBreedSection } from "./BreedSection.styles"
-import { Swiper, SwiperSlide } from 'swiper/react';
 
 export const BreedSection = () => {
 
