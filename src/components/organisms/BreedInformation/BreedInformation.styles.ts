@@ -32,4 +32,7 @@ export const StyledBreedInformation = styled.main`
         font-size: 1.4rem;
         font-weight: 500;
     }
+    h6 {
+        background-color: red;
+    }
 `;
