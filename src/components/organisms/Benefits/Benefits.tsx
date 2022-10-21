@@ -11,7 +11,7 @@ export const Benefits = () => {
        <footer>
         <Card variant='pink'>
           <h1>You will change their life</h1>
-          <p>More than change this cat’s life, you give them life. And you get a new best friend.</p>
+          <p>More than change this cat's life, you give them life. And you get a new best friend.</p>
         </Card>
         <Card variant='white'>
           <h1>You will get a <span>great friend</span></h1>

@@ -1,20 +1,15 @@
-import { useLoaderData, useParams } from "react-router-dom"
-import { breedList } from "../utils/breedList"
 import { CatsWrapper } from "../components/molecules/CatsWrapper/CatsWrapper"
 import { Footer } from "../components/molecules/Footer/Footer"
 import { Header } from "../components/molecules/Header/Header"
-import { ApiResponse } from "../types/apiTypes"
+import { PaginationButtons } from "../components/molecules/PaginationButtons/PaginationButtons"
 
 export const Cats = () => {
-
-  const breeds = useLoaderData() as ApiResponse;
 
   return (
     <>
       <Header/>
-        <CatsWrapper>
-          {breedList(breeds)}
-        </CatsWrapper>
+        <CatsWrapper/>
+        <PaginationButtons/>
       <Footer/>
     </>
   )

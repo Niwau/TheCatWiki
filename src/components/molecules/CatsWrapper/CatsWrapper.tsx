@@ -1,10 +1,33 @@
 import { StyledCatsWrapper } from "./CatsWrapper.styles"
-import { ReactNode } from "react"
+import { useContext } from "react"
+import { useParams } from "react-router-dom"
+import { APIContext } from "../../../context/APIContext"
+import { Breed } from "../Breed/Breed"
 
-export const CatsWrapper = ({ children } : { children: ReactNode}) => {
+export const CatsWrapper = () => {
+
+  const breeds = useContext(APIContext)
+  const { page } = useParams()
+
+  const start = parseInt(page!) * 10;
+  const end = parseInt(page!) * 10 + 10;
+
   return (
     <StyledCatsWrapper>
-        {children}
+      {
+        breeds.slice(start, end)
+        .map(breed => {
+          return (
+            <Breed 
+              key={breed.id} 
+              country={breed.origin} 
+              image={breed.image ? breed.image.url : '/CatNotExist.webp'} 
+              name={breed.name} 
+              pageUrl=" " 
+            />
+          )
+        })
+      }
     </StyledCatsWrapper>
   )
 }

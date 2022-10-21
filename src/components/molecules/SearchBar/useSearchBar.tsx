@@ -1,6 +1,6 @@
 import { ChangeEvent, useCallback, useState } from "react"
 import { useDebounce } from "../../../hooks/useDebounce"
-import { ApiResponse } from "../../../types/apiTypes"
+import { ApiResponse } from "../../../types/api"
 import { API_ENDPOINT } from "../../../utils/api"
 
 export function useSearchBar() {
