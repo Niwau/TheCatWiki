@@ -1,16 +1,15 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { Wrapper } from "./PaginationButton.styles"
 
 type PaginationButtonProps = {
     children: string,
-    variant?: 'pink',
     path: string
 }
 
-export const PaginationButton = ({ children, variant, path } : PaginationButtonProps) => {
+export const PaginationButton = ({ children, path } : PaginationButtonProps) => {
   return (
-    <Wrapper variant={variant}>
-        <Link to={path}>{ children }</Link>
+    <Wrapper>
+        <NavLink to={path}>{ children }</NavLink>
     </Wrapper>
   )
 }

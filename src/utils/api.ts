@@ -12,5 +12,7 @@ export const useFetch = () => {
             .then(data => setBreeds(data))
     }, [])
 
+    console.log(breeds);
+
     return breeds
 }

@@ -1,23 +1,15 @@
-import { useParams } from "react-router-dom";
-import { PaginationButton } from "../../atoms/PaginationButton/PaginationButton";
+import { PaginationButton } from "../../atoms/PaginationButton/PaginationButton"
 import { Wrapper } from "./PaginationButtons.styles"
+import { usePaginationButtons } from "./usePaginationButtons"
 
 export const PaginationButtons = () => {
 
-  const PaginationButtonsList : number[] = [];
-  const { page } = useParams();
-  const pageNumber = parseInt(page!)
-
-  for (let i = 0; i < pageNumber; i++) {
-    PaginationButtonsList.push(i);
-  }
+  const buttons = usePaginationButtons()
 
   return (
     <Wrapper>
       {
-        PaginationButtonsList.map((i) => (
-          <PaginationButton key={i} path='' children={i.toString()}/>
-        ))
+        buttons.map(i => <PaginationButton path={`/cats/${i}`} key={i}>{i}</PaginationButton>)
       }
     </Wrapper>
   )

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div<{variant?: 'pink'}>`
+export const Wrapper = styled.div`
     display: inline-block;
     width: fit-content;
     > a {
@@ -11,9 +11,12 @@ export const Wrapper = styled.div<{variant?: 'pink'}>`
         font-weight: 600;
         text-decoration: none;
         transition: 0.3s ease;
-        
-        color: ${props => props.variant == 'pink' ? 'white' : 'black'};
-        background-color: ${props => props.variant == 'pink' ? 'var(--pink)' : 'white'};
+        color: black;
+        background-color: white;
+    }
 
+    > a.active {
+        background-color: var(--pink);
+        color: white;
     }
 `;
