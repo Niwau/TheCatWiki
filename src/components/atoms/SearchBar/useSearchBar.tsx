@@ -1,10 +1,10 @@
 import { ChangeEvent, useCallback, useState } from "react"
 import { useDebounce } from "../../../hooks/useDebounce"
-import { ApiResponse } from "../../../types/api"
+import { Breeds } from "../../../types/api"
 import { API_ENDPOINT } from "../../../utils/api"
 
 export function useSearchBar() {
-    const [searchResult, setSearchResult] = useState<ApiResponse | []>([])
+    const [searchResult, setSearchResult] = useState<Breeds | []>([])
     const [isOpen, setIsOpen] = useState(false)
 
     const handleChange = (event : ChangeEvent<HTMLInputElement>) => {
