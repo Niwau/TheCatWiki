@@ -7,6 +7,7 @@
 
 ## Technologies used in this project 🍜
 - React
+- TypeScript
 - Styled-Components
 - React-Router
 - TheCatAPI (https://thecatapi.com/)
