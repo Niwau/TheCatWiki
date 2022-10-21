@@ -1,20 +1,22 @@
 import styled from 'styled-components';
 
 export const StyledBreedInformation = styled.main`
-    margin: 5rem 10rem;
+    margin: 5rem 10rem 10rem 10rem;
     display: grid;
     grid-template-columns: 0.6fr 1fr;
     gap: 7rem;
+    outline: 1px solid black;
+    padding: 5rem;
     h1 {
         font-size: 3.2rem;
         font-weight: 500;
     }
     img {
-        width: 100%;
+        width: 80%;
         box-shadow: 1.5rem 1.5rem 0 black;
     }
     label {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         color: var(--pink);
     }
     p {
@@ -24,9 +26,7 @@ export const StyledBreedInformation = styled.main`
         font-size: 1.8rem;
         color: var(--gray);
         font-weight: 300;
-        line-height: 24px;
-        letter-spacing: 0em;
-        text-align: left;
+        line-height: 2.4rem;
     }
     h3 {
         font-size: 1.4rem;
@@ -34,5 +34,11 @@ export const StyledBreedInformation = styled.main`
     }
     h6 {
         background-color: red;
+    }
+    @media(max-width: 600px){
+        grid-template-columns: 1fr;
+        img {
+            width: 50%;
+        }
     }
 `;

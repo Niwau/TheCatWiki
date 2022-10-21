@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const StyledFooter = styled.footer`
-    position: relative;
     display: flex;
     justify-content: space-between;
     padding: 0.5rem 3rem;

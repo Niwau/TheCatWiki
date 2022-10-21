@@ -26,7 +26,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <>
     <GlobalStyle/>
     <APIContextProvider>
-      <RouterProvider router={router}/>
+    <RouterProvider router={router}/>
     </APIContextProvider>
   </>
 )

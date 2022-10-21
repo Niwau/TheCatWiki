@@ -7,13 +7,13 @@ import { Hero } from "../components/organisms/Hero/Hero"
 
 export const Home = () => {
   return (
-    <div>
+    <>
       <Header/>
       <Hero/>
       <Benefits/>
       <BreedSection/>
       <DidYouKnow/>
       <Footer/>
-    </div>
+    </>
   )
 }
